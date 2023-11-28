@@ -1,25 +1,15 @@
-const pokemonList = [ 
-    {
-        name: "Bulbasaur",
-        imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-        name: "Mew",
-    },
-    ];
 
-function PokemonCard () {
+function PokemonCard ({ pokemon }) {
+console.log (pokemon)
 
-    const pokemon = pokemonList[1];
-
-    return (
+  return (
     <div>
       <figure>
-      {pokemon.imgSrc ? (
+        {pokemon.imgSrc ? (
           <img src={pokemon.imgSrc} alt={pokemon.name} className="Image" />
-          ) : (
+        ) : (
           <p>???</p>
-          )}
+        )}
       </figure>
       <figcaption>
         <h1>{pokemon.name}</h1>
@@ -27,6 +17,5 @@ function PokemonCard () {
     </div>
   );
 }
-
 
 export default PokemonCard;
